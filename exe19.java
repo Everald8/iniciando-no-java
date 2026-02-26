@@ -1,23 +1,27 @@
 import java.util.Scanner;
 public class exe19 {
-    public static int[] mult(int val) {
-        int[] vett = new int[11];
-        for(int i=0;i<=10;i++){
-            vett[i]= val * i;
+    public static int[][] mult() {
+        int[][] mat = new int [11][11];
+        for (int i = 0; i <= 10; i++) {
+            for (int y = 0; y <= 10; y++) {
+                mat[i][y] = i * y;
 
-        }return vett;
+            }
+           }return mat;
 
 
-    }public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int valor;
-        int [] vetor;
-        System.out.println("digite um numero para ver sua tabuada:");
-        valor = sc.nextInt();
-        vetor = mult (valor);
-        for(int i = 0; i<=10; i++){
-            System.out.println("a tabuada dese numero é " +valor+ "x" +i+ "=" + vetor[i] );
-        }
+        }public static void main(String[] args){
+            Scanner sc = new Scanner(System.in);
 
-    sc.close();}
-}
+            int[][] result;
+            result = mult();
+            for (int i = 0; i <= 10; i++) {
+                for (int y = 0; y <= 10; y++) {
+                    System.out.println(i + "X" + y + "=" + result[i][y]);
+                }
+
+
+
+            }
+        sc.close();}
+    }
